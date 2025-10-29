@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import UploadReceipt from "./components/UploadReceipt";
+import ExpenseTable from "./components/ExpenseTable";
+import ExpenseChart from "./components/ExpenseChart";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "20px" }}>
+      <h1>Receipt Scanner App</h1>
+      <UploadReceipt />
+      <h2>Expenses Table</h2>
+      <ExpenseTable />
+      <h2>Expenses Chart</h2>
+      <ExpenseChart />
     </div>
   );
 }
-
-export default App;
